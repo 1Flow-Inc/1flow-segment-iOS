@@ -1,2 +1,3 @@
-# 1flow-segment-iOS
-1Flow plugin to integrate with Segment SDK
+# 1Flow-Segment
+
+A description of this package.

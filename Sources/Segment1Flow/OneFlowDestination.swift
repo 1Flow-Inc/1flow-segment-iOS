@@ -51,7 +51,9 @@ public class OneFlowDestination: DestinationPlugin, RemoteNotifications {
     public let type = PluginType.destination
     public let key = "1Flow Mobile Plugin"
     public var analytics: Analytics? = nil
-    
+
+    public init() {}
+
     public func update(settings: Settings, type: UpdateType) {
         guard type == .initial else { return }
         guard
@@ -71,30 +73,30 @@ public class OneFlowDestination: DestinationPlugin, RemoteNotifications {
         OneFlow.logUser(userID, userDetails: event.traits?.dictionaryValue)
         return event
     }
-    
+
     public func track(event: TrackEvent) -> TrackEvent? {
         OneFlow.recordEventName(event.event, parameters: event.properties?.dictionaryValue)
         return event
     }
-    
+
     public func screen(event: ScreenEvent) -> ScreenEvent? {
         OneFlow.recordEventName(event.name ?? "screen_view", parameters: event.properties?.dictionaryValue)
         return event
     }
-    
+
     public func group(event: GroupEvent) -> GroupEvent? {
         return nil
     }
-    
+
     public func alias(event: AliasEvent) -> AliasEvent? {
         return nil
     }
-    
+
     public func reset() {
         flush()
         analytics?.log(message: "oneFlow reset")
     }
-    
+
     public func flush() {
         analytics?.log(message: "oneFlow Flush")
     }

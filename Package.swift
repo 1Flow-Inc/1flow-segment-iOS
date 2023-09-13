@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "1Flow-Segment",
+    name: "Segment1Flow",
     platforms: [
         .iOS(.v13)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "1Flow-Segment",
-            targets: ["1Flow-Segment"]),
+            name: "Segment1Flow",
+            targets: ["Segment1Flow"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -32,7 +32,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "1Flow-Segment",
+            name: "Segment1Flow",
             dependencies: [
                 .product(name: "_1Flow", package: "_1Flow"),
 //                "_1Flow", "Segment"

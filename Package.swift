@@ -35,8 +35,6 @@ let package = Package(
             name: "Segment1Flow",
             dependencies: [
                 .product(name: "_1Flow", package: "_1Flow"),
-//                "_1Flow", "Segment"
-               // .product(name: "_1Flow", package: "1flow-ios-sdk"),
                 .product(name: "Segment", package: "Segment")
             ])
     ]

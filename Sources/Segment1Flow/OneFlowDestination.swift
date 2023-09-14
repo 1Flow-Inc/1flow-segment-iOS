@@ -31,21 +31,6 @@ import Foundation
 import Segment
 import _1Flow
 
-/*
- // This is how application will configure segment
- 
- func setupSegmentManager() {
-     let config = Configuration(writeKey: "SEGMENT_KEY")
-         .trackApplicationLifecycleEvents(true)
-         .flushAt(3)
-         .flushInterval(10)
-             
-     self.analytics = Analytics(configuration: config)
-     let destination = OneFlowDestination(oneFlowKey: "ONEFLOW_KEY")
-     self.analytics?.add(plugin: destination)
- }
- */
-  
 public class OneFlowDestination: DestinationPlugin, RemoteNotifications {
     public let timeline = Timeline()
     public let type = PluginType.destination

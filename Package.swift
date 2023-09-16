@@ -18,12 +18,10 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(
-//            name: "_1Flow",
             url: "https://github.com/1Flow-Inc/1flow-ios-sdk.git",
             branch: "master"
         ),
         .package(
-//            name: "Segment",
             url: "https://github.com/segmentio/analytics-swift.git",
             from: "1.4.0"
         )
